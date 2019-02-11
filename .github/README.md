@@ -33,11 +33,32 @@ docker-compose up -d nginx mysql phpmyadmin
 docker-compose exec --user=laradock workspace bash
 ``` 
 
-- run composer install and migrations
+- copy .env.example to .env
+```
+cp .env.example .env
+```
+
+- OPEN .env AND change APP_URL to http://forus.test
+
+- change DB_HOST to mysql, DB_DATABASE to app and db_username/password to root
+
+```
+DB_CONNECTION=mysql
+DB_HOST=mysql
+DB_PORT=3306
+DB_DATABASE=app
+DB_USERNAME=root
+DB_PASSWORD=root
+```
+
+- run composer install, generate key and migrations
 ```
 composer install
+php artisan key:generate
 php artisan migrate --seed
 ```
+
+
 
 extra:
 
