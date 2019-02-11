@@ -39,6 +39,16 @@ composer install
 php artisan migrate --seed
 ```
 
+extra:
+
+- add forus.test to hosts to replace localhost:80
+```
+sudo nano /etc/hosts 
+# add line to file:
+127.0.0.1 forus.test
+```
+
+
 - to refresh db use:
 ```
 php artisan migrate:refresh --seed
