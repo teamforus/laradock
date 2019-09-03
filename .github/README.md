@@ -1,6 +1,6 @@
 # Laradock.io
 
-Go to laradock website for more information about laradock: https://laradock.io
+<p align="center">PHP development environment that runs on Docker</p>
 
 This repository is a fork of http://github.com/laradock/laradock and contains the configuration to easily deploy the Forus backend.
 
@@ -50,17 +50,6 @@ DB_DATABASE=app
 DB_USERNAME=root
 DB_PASSWORD=root
 ```
-
-- run composer install, generate key and migrations
-```
-composer install
-php artisan key:generate
-php artisan migrate --seed
-```
-
-
-
-extra:
 
 - add forus.test to hosts to replace localhost:80
 ```
